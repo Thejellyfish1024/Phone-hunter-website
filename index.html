@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        .poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-200">
+    <header class="poppins">
+        <nav class="flex justify-between px-28 py-8">
+            <div class="text-2xl font-bold">Hot Gadgets</div>
+            <div><button class="btn btn-primary text-white">Sign Up</button></div>
+        </nav>
+    </header>
+    <main class="poppins">
+        <section class="container mx-auto">
+            <!-- search field -->
+            <div class="text-center pb-8">
+                <h1 class="text-4xl font-semibold mb-12">Search your phone</h1>
+                <input type="text" id="input-field" placeholder="Search your phone" class="input input-bordered input-success w-full max-w-xs" />
+                <button class="btn btn-accent" onclick="inputText()">Search</button>
+            </div>
+            <!-- phone container -->
+            <div id="phone-container" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+            
+            </div>
+        </section>
+    </main>
+    <!-- js -->
+    <script src="js/phone.js"></script>
+</body>
+
+</html>
