@@ -18,25 +18,49 @@
     </style>
 </head>
 
-<body class="bg-gray-200">
+<body class="bg-gray-200 min-h-screen">
     <header class="poppins">
-        <nav class="flex justify-between px-28 py-8">
+        <nav class="flex justify-between px-14 lg:px-28 py-8">
             <div class="text-2xl font-bold">Hot Gadgets</div>
-            <div><button class="btn btn-primary text-white">Sign Up</button></div>
+            <div>
+                <button class="btn btn-primary text-white">Sign Up</button>
+            </div>
         </nav>
     </header>
     <main class="poppins">
         <section class="container mx-auto">
             <!-- search field -->
             <div class="text-center pb-8">
-                <h1 class="text-4xl font-semibold mb-12">Search your phone</h1>
-                <input type="text" id="input-field" placeholder="Search your phone" class="input input-bordered input-success w-full max-w-xs" />
+                <h1 class="lg:text-4xl text-2xl font-semibold mb-12">Search your phone</h1>
+                <input type="text" id="input-field" placeholder="Search your phone"
+                    class="input input-bordered input-success lg:w-full max-w-xs" />
                 <button class="btn btn-accent" onclick="inputText()">Search</button>
             </div>
-            <!-- phone container -->
-            <div id="phone-container" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-            
+            <!-- loading -->
+            <div class="text-center">
+                <span id="loading-container" class="loading loading-spinner text-red-600 loading-lg hidden"></span>
             </div>
+            <!-- phone container -->
+            <div id="phone-container" class="grid lg:grid-cols-3 md:grid-cols-2 px-3 grid-cols-1 gap-4">
+            </div>
+            <div id="nothing-available-container"></div>
+            <div class="text-center mt-10 pb-16">
+                <button class="btn btn-primary hidden" id="show-all-btn">Show All</button>
+            </div>
+        </section>
+        <!-- modal -->
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <!-- <button class="btn" onclick="show_details_modal.showModal()">open modal</button> -->
+            <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle ">
+                <form method="dialog" class="modal-box">
+                    <div id="modal-text-container"></div>
+                    <div class="modal-action">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn btn-error">Close</button>
+                    </div>
+                </form>
+            </dialog>
         </section>
     </main>
     <!-- js -->
